@@ -36,7 +36,9 @@ The model omits Na⁺-powered motors, directional switching, flexible hook/motor
 - The torque–speed panel exports **PNG** or **SVG** images and a separate **CSV** containing sampled motor curves, load lines, operating points, and parameters at the selected time. Operating points are **model drift speeds**, not fits to camera data.
 - Run `node tests/release.test.cjs` from this repository with a recent Node.js. It checks 1,134 positive-driving-force parameter combinations, curve/load intersections, default trajectories, and seeded 30 fps sampling. It does not establish biological predictive validity or verify PNG output in every browser. See [REVIEW.md](REVIEW.md).
 
-Calculations and exports run locally in the browser. No account, server-side analysis, analytics, external runtime libraries, or data upload is used. **No source-code license has been selected**; public visibility alone does not grant permission to redistribute or adapt the code.
+Calculations and exports run locally in the browser. No account, server-side analysis, analytics, external runtime libraries, or data upload is used.
+
+**Source-code permissions:** The author does not grant permission to redistribute or modify the source code. Making the source publicly viewable does not change this policy. Contact the author for permission before redistributing or modifying it.
 
 ## 日本語
 
@@ -65,4 +67,6 @@ Calculations and exports run locally in the browser. No account, server-side ana
 
 上部の「CSV保存」は各条件のフレームごとの真のモデル値、カメラ推定値、設定を出力します。曲線パネルの **PNG / SVG / CSV** は、選択時刻のトルク曲線・負荷直線・動作点を画像または数値で保存します。動作点は**モデルのドリフト速度**であり、カメラ測定値のフィットではありません。
 
-ソース一式で `node tests/release.test.cjs` を実行すると、理論的な速度一致、交点、30 fpsの計算などを確認できます。生物学的な予測精度や全ブラウザーでの画像出力を保証するものではありません。公開前の点検記録は [REVIEW.md](REVIEW.md) にあります。**ソースの再配布・改変を許諾するライセンスは未選択**です。
+ソース一式で `node tests/release.test.cjs` を実行すると、理論的な速度一致、交点、30 fpsの計算などを確認できます。生物学的な予測精度や全ブラウザーでの画像出力を保証するものではありません。公開前の点検記録は [REVIEW.md](REVIEW.md) にあります。
+
+**ソースコードの利用条件：ソースの再配布・改変は許諾しません。**ソースが閲覧可能な状態で公開されても、この方針は変わりません。再配布・改変を希望する場合は、事前に著作者へ許可を求めてください。
