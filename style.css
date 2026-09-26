@@ -2,3 +2,5 @@
 header{flex-wrap:wrap}header>div{flex:1;min-width:200px}
  #matchStatus.warning-state{color:var(--orange)}
  .torque-plot{overflow-x:auto}.torque-plot svg{display:block;width:100%;height:auto;min-width:640px}.plot-actions{display:flex;gap:8px;flex-wrap:wrap}
+
+.header-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.header-actions a,.control-group a{color:var(--green)}.assay-note{max-width:760px;font-size:14px;margin:3px 0 0}.control-group input[type=file]{width:100%;max-width:100%;font-size:13px}.control-group input[type=file]::file-selector-button{font:inherit;color:var(--text);background:#18283d;border:1px solid var(--line);border-radius:8px;padding:6px;cursor:pointer}.control-group input:disabled{opacity:.45;cursor:not-allowed}#importStatus{overflow-wrap:anywhere}

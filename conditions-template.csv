@@ -1,0 +1,2 @@
+target,voltage,dpH,diameter,radius,viscosity,tau,fps,exposure,noise,force,stators,load,interventionEnabled,stochastic,thermal
+50,150,0.5,0.5,0.3,1,2,1000,0.5,8,0.5,3.1943337182101152,2.5044346351146585,true,false,true

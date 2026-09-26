@@ -21,3 +21,10 @@ Scope: FlagellaScope static Site, English/Japanese interface, model, time series
 - At very low mean stator occupancy, integer stochastic traces can have extended zero-occupancy periods. High exchange time constants can prevent a 15–20 s average from reaching the steady-state target.
 - Camera readout has phase wrapping and exposure blur; no subframe tracking or motion-corrected localization is implemented.
 - The tests below are code-level and numerical. Rendering, interactions, and PNG downloads have not been checked in a real browser here.
+
+## 2026-09-26 update
+
+- Added a switch for the 5–20 s intervention. Off applies baseline parameters throughout; stochastic stator exchange, if enabled, still represents baseline fluctuations.
+- Added single-row settings CSV import with ranges and atomic validation, a downloadable template, bilingual explanations, a rendered README link, and JSON exports for trajectories and torque–speed snapshots.
+- Updated the Japanese title and bead-assay explanation. Extended the release check with intervention-off trajectories and CSV rejection cases.
+- Automated browser UI testing could not run in this environment because the Playwright browser executable is absent. Numerical and syntax checks passed; biological validation and real-browser export QA remain separate.

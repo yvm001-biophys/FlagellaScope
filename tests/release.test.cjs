@@ -2,8 +2,9 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const m = require('../model.js');
+const csv = require('../conditions.js');
 
-for (const asset of ['index.html', 'style.css', 'i18n.js', 'model.js', 'torque.js', 'app.js']) {
+for (const asset of ['index.html', 'style.css', 'i18n.js', 'model.js', 'torque.js', 'app.js', 'conditions.js', 'conditions-template.csv', 'README.html']) {
   assert.ok(fs.statSync(path.join(__dirname, '..', asset)).size > 0, asset);
 }
 
@@ -51,4 +52,16 @@ const second = m.simulate(random, matched.stators, 'stators', 23456);
 assert.equal(first.frames.length, 30 * m.duration + 1);
 assert.deepEqual(first.frames.map(frame => frame.n), second.frames.map(frame => frame.n));
 assert.ok(first.frames.some(frame => frame.t > 5 && frame.t < 20 && frame.n !== 8));
+const noIntervention = {...defaults, interventionEnabled:false, stochastic:false, thermal:false, fps:30};
+for(const [i,type] of ['force','stators','load'].entries()){
+ const run=m.simulate(noIntervention, matched[type],type,12345+i*11111);
+ const baseline=m.speed(8,m.pmf(noIntervention)/180,m.drag(noIntervention));
+ assert.ok(run.frames.every(frame=>Math.abs(frame.speed-baseline)<1e-5 && Math.abs(frame.n-8)<1e-5 && Math.abs(frame.pmf-m.pmf(noIntervention))<1e-8));
+}
+const template=fs.readFileSync(path.join(__dirname,'../conditions-template.csv'),'utf8');
+const imported=csv.parse(template);
+assert.equal(imported.interventionEnabled,true);
+assert.equal(imported.fps,1000);
+assert.equal(imported.force,.5);
+for(const bad of ['voltage,unknown\n150,1','fps\n29','fps\n30.5','stochastic\nyes','voltage,voltage\n150,150','voltage\n150\n200','voltage\nInfinity']) assert.throws(()=>csv.parse(bad));
 console.log(`Passed ${cases} positive-motive-force combinations, three trajectories, and 30 fps seeded sampling.`);
