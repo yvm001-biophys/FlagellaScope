@@ -1,5 +1,7 @@
 # FlagellaScope — Bacterial Flagellar Rotation Measurement Simulator
 
+**Version 1.0**
+
 **FlagellaScope** is a browser-based virtual bead assay for comparing three different causes of flagellar motor slowdown: reduced proton motive force, fewer engaged stators, and increased viscous load. It demonstrates why the same measured speed does not identify a unique mechanism. The app is a research and teaching aid, **not a diagnostic tool for experimental data**.
 
 In a bead assay, a bead attached to a short flagellar segment is imaged to estimate the motor's rotation speed from its motion.
@@ -50,6 +52,8 @@ Calculations and exports run locally in the browser. No account, server-side ana
 **Source-code permissions:** The author does not grant permission to redistribute or modify the source code. Making the source publicly viewable does not change this policy. Contact the author for permission before redistributing or modifying it.
 
 ## 日本語
+
+**バージョン 1.0**
 
 **作成者：** 森本 雄祐（Yusuke V. Morimoto）、九州工業大学 教授。
 
