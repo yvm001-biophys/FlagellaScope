@@ -6,6 +6,8 @@ In a bead assay, a bead attached to a short flagellar segment is imaged to estim
 
 [English](#english) · [日本語](#日本語)
 
+**Creator:** Yusuke V. Morimoto (森本 雄祐), Professor, Kyushu Institute of Technology, Japan.
+
 ## English
 
 ### Open and use
@@ -48,6 +50,8 @@ Calculations and exports run locally in the browser. No account, server-side ana
 **Source-code permissions:** The author does not grant permission to redistribute or modify the source code. Making the source publicly viewable does not change this policy. Contact the author for permission before redistributing or modifying it.
 
 ## 日本語
+
+**作成者：** 森本 雄祐（Yusuke V. Morimoto）、九州工業大学 教授。
 
 ### 概要と操作方法
 
